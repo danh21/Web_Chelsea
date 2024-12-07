@@ -1,0 +1,644 @@
+* {
+    margin: 0;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+} 
+
+
+
+/*--------------------------- HEADER -------------------------*/
+header {  
+    height: 170px;  
+}
+
+
+#nav1 {
+    height: 33px;
+    background-color: rgb(9, 9, 150);
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+#nav1 h2 {
+    position: relative;
+    font-size: 1.2rem;
+    margin: auto; 
+}
+#nav1 h2:nth-child(1), #info b:nth-child(1) {
+    margin-left: 150px; 
+}
+#nav1 a {
+    text-decoration: none;
+    color: white;   
+}
+#nav1 h2 a:after { 
+    content: ''; 
+    width: 0; 
+    position: absolute;   
+    top: 115%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: rgb(255, 255, 255);
+    transition: width 0.3s; 
+}
+#nav1 h2 a:hover::after {  
+    height: 3px;
+    width: 100%;
+}
+
+#nav1 #sponsor {
+    margin-left: 330px;
+}
+#sponsor img {
+    margin-right: 40px;
+}
+
+
+#nav2 {
+    height: 85px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search{
+    margin: 0 32px 10px 0;
+}
+#search .bgg.bo a{
+    position: relative;
+}
+#search .bgg.bo a::after{
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    content: "";
+    border-left: 1px solid gray;
+    height: 30px;
+    transform: translateY(-50%);
+}
+.bgg a::selection, #nav2 .bgg a::selection {
+    background-color: rgb(247, 209, 138);
+    color: rgb(15, 15, 49);
+}
+
+#nav2 b { 
+    margin-left: 16px;
+    position: relative; 
+}
+#nav2 a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+}
+#nav2 b:after {   
+    content: ''; 
+    width: 0; 
+    height: 2.5px;
+    position: absolute;   
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: blue;
+    transition: width 0.3s; 
+}
+#nav2 b:hover a, #nav2 a:hover {
+    color: blue;
+}
+#nav2 b:hover::after{  
+    width: 100%
+}
+
+
+#image-logo a img{
+    position: relative;
+    left: 32px;
+    top: -100px;
+}
+
+
+
+/* ---------------------- COMMON FORMAT -----------------------*/
+h1 {
+    font-size: 3rem;
+    margin: 20px;
+}
+h1::selection {
+    background-color: rgb(255, 208, 122);
+}
+#title {
+    font-size: 4rem;
+}
+
+
+
+/*----------------------- LATEST VIDEO ------------------------*/
+.video {
+    position: relative;
+    width: 350px;
+    height: 330px;
+}
+.latest-vid {
+    display: flex;
+    justify-content: space-between;  
+}
+.latest-vid .video {
+    margin: 15px;   
+}
+.video img {
+    width: 350px;
+    height: 200px;
+}
+.latest-vid a {
+    text-decoration: none;
+}
+.latest-vid h2 {
+    color: rgb(36, 36, 158);
+    font-size: 2rem;
+}
+.latest-vid h5 {
+    position: absolute;
+    top: 300px;
+    left: 1px;
+    bottom: 10px;
+    right: 10px;
+    color: gray;
+    font-weight: lighter;
+    font-size: 1.3rem;
+}
+.video img:hover {
+    cursor: pointer;
+    animation: zoom ease-out 0.5s;
+}
+@keyframes zoom {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1.05, 1.05);
+    }
+  }
+.video h2::selection, h5::selection {
+    background-color: rgb(247, 209, 138);
+}
+
+
+
+/*------------------------ Button SEE ALL --------------------*/
+.btnSeeAll {
+    font-size: 1.5rem;;
+    height: 50px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(8, 8, 58);
+    margin: 20px auto 50px auto; 
+    color: blue;
+    font-weight:600;    
+    text-decoration: none;
+}
+.btnSeeAll:hover {
+    animation: growth ease-in 0.5s ;
+    cursor: pointer;
+}
+@keyframes growth {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: blue;
+        color: white;
+    }
+}
+
+
+
+/*------------------------- NO TO HATE BANNER -----------------*/
+#notohate {
+    height: 111px;
+    width: 1111px;
+    margin: 30px 196px;
+    text-align: center;
+}
+
+
+
+/*----------------------- Button FEEDBACK ---------------------*/
+.feedback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 500px;
+    left: 1478px;
+    height: 130px;
+    width: 40px;
+    background-color: rgb(16, 16, 107);   
+}
+.feedback a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;   
+    transform: rotate(-90deg);
+}
+
+
+
+/* ------------------------- NEWS ---------------------------*/
+.news {
+    display: flex;
+}
+.box-new1, .box-new2 {
+    cursor: pointer;
+    margin: 16px;
+    border: 2px solid rgb(8, 8, 58);
+    display: flex;
+    flex-direction: column; 
+    height: 560px;
+    position: relative;
+}
+.box-new1:nth-child(1) img{
+    width: 950px;
+    height: 415px; 
+} 
+.box-new1:nth-child(2) img {
+    width: 100%;
+    height: 200px;
+}
+.box-new2:nth-child(1) img, .box-new2:nth-child(2) img  {
+    width: 460px;
+    height: 200px;
+}
+.box-new1 a, .box-new2 a {
+    text-decoration: none;
+}
+.box-new1 h2, .box-new2 h2 {
+    color: rgb(17, 17, 146) ;
+    font-size: 30px;
+    margin: 20px 20px 0 20px;
+}
+.time h5{
+    color: gray;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    position: absolute;
+    top: 500px;
+    left: 20px;
+}
+.content p {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 20px 20px 0 20px;
+}
+#kante {
+    height: 350px;
+    width: 350px;
+    margin: 15px 90px 0 85px;
+}
+.box-new1 img:hover, .box-new2 img:hover {
+    animation: zoom ease-out 0.5s;
+}
+
+
+
+/* ------------------------ MATCHES ---------------------------*/
+fieldset {
+    border: 4px solid rgb(9, 9, 150);  
+    margin: 0 30px;
+    position: relative;
+    width: 1420px;
+    height: 440px;
+}
+fieldset legend{
+    color: rgb(9, 9, 150);
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+}
+#hublot {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 5%);
+}
+fieldset legend::selection, .match .next_match::selection, .match .timer::selection, #date h2::selection {
+    background-color: rgb(247, 209, 138);
+}
+.match {
+    display: flex;
+    margin-bottom: 40px;
+}
+.match .next_match {
+    width: 80px;
+    height: 23px;
+    font-size: 1.2rem;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px 0 540px;
+}
+.match .timer {
+    font-size: 2rem;
+    color: rgb(9, 9, 150);   
+}
+.league {
+    display: flex;
+    justify-content: space-between;
+}
+.league_box {
+    position: relative;
+    height: 250px;
+    width: 460px;  
+}
+.league .league_box:nth-child(2), .league .league_box:nth-child(3) {
+    border-left: 2px solid rgba(133, 116, 116, 0.1);
+}
+.league_head {
+    display: flex;
+    margin: 0 20px 70px 10px;
+    justify-content: space-between;
+}
+.league_cup {
+    font-size: 1.5rem;
+    color: rgb(9, 9, 150);
+    font-weight: bold;
+}
+.loc {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.match_stt {
+    width: 80px;
+    height: 20px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.clb {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.clb img {
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+.nameclb1 {
+    position: absolute;
+    left: -50px;
+    top: 120px;
+    font-size: 1.5rem;
+}
+.nameclb2 {
+    position: absolute;
+    left: -50px;
+    top: 180px;
+    font-size: 1.5rem;
+}
+.score {
+    font-size: 2.5rem;
+    margin: 10px 10px 0 10px;
+}
+#date {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    right: 10%;
+    color: rgb(9, 9, 150);
+}
+#date h2 {
+    font-size: 3rem;
+}
+#date::after {
+    position: absolute;
+    content: "";
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 1px solid gray;
+    height: 130px;
+}
+
+.detail_match {
+    position: absolute;
+    bottom: 0;
+    color: blue;
+    font-size: 1.5rem;
+    margin-left: 350px;
+    text-decoration: none;
+}
+.detail_match:hover {
+    cursor: pointer;
+    color: rgb(9, 9, 150);
+}
+.league_box h5 {
+    color: rgb(9, 9, 150) ;
+    margin: 5px 0 10px 10px;
+    font-size: 1.2rem;
+}
+
+table {
+    margin-left: 10px;
+}
+th {
+    color: gray;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray; 
+}
+.logoclb {
+    padding-left: 25px;
+}
+td img {
+    width: 30px;
+    height: 30px;
+}
+td {
+    padding: 9px;
+    font-size: 1.5rem;  
+}
+.num.P {
+    padding-left: 120px;
+}
+
+
+
+/* -------------------------- FEATURED VIDEO --------------------*/
+#feavid {
+    margin-top: 160px;
+}
+#kai {
+    position: relative;
+}
+#kai img {
+    width: 954px;
+    height: 542px;
+    margin-left: 18px;
+    position: absolute;
+    bottom: 30px;
+}
+#kai img:hover {
+    animation: zoom ease-in 0.5s;
+    cursor: pointer;
+}
+.box_kai {
+    margin: 80px 30px 60px 880px;
+    border: 2px solid rgb(9, 9, 150);
+    width: 590px;
+    height: 542px;
+}
+.box_kai h1 {
+    color: rgb(9, 9, 150);
+    font-size: 30px;
+}
+.box_kai h1, p{
+    margin-left: 120px;
+}
+.box_kai p {
+    font-size: 1.5rem;
+}
+.box_kai h1::selection, p::selection {
+    background-color: rgb(247, 209, 138);
+}
+.in4 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 270px;
+}
+.in4 p {
+    color: gray;
+    font-size: 1.5rem;
+}
+.in4 .icon {
+    display: flex;
+    margin: 0 20px 5px 0px;
+}
+.in4 .icon a {
+    text-decoration: none;
+}
+.in4 .icon .circle{
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+    border-radius: 2rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+@keyframes growth1 {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: rgb(29, 29, 41);
+        color: white;
+    }
+}
+.icon a:hover {
+    cursor: pointer;
+    animation: growth1 ease .5s;
+}
+
+
+
+/* -------------------------- SPONSOR -------------------------*/
+.SPONSOR {
+    margin-top: 55px;
+    padding-top: 70px;
+    border-top: 1px solid gray;
+    width: 100%;    
+}
+.SPONSOR img {
+    cursor: pointer;
+}
+.SPONSOR img::selection {
+    background-color: rgb(247, 209, 138);
+}
+.spon1 {
+    text-align: center;
+    margin-bottom: 30px;
+}   
+.spon1 img {
+    margin-right: 50px;
+}  
+.spon2 {
+    text-align: center; 
+}
+.spon2 img {
+    margin-right: 25px; 
+}
+
+
+
+/* ------------------------- FOOTER ---------------------*/
+.footer {
+    margin-top: 95px;
+    height: 234px;
+    background-color: rgb(9, 9, 150);
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+.icon1 {
+    display: flex;
+    justify-content: center; 
+}
+.icon1 a, .foot a {
+    text-decoration: none;
+}
+.circle1 {
+    height: 40px;
+    width: 40px;
+    margin-left: 25px;
+    margin-top: 30px; 
+    border-radius: 2rem;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.foot {
+    display: flex;
+    justify-content: center;
+}
+.foot a {
+    margin-top: 25px;
+    color: white;
+    margin-left: 40px;
+}
+.foot a:hover {
+    color: blue;
+}
+.footer p {
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+}
+.footer p::selection, .foot a::selection, option a::selection {
+    background-color: rgb(247, 209, 138);
+}
+select {
+    color: white;
+    background-color: rgb(9, 9, 150);     
+    border-color: rgb(9, 9, 150) ;
+    border-bottom: 1px solid white;
+    margin-left: 700px;
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
